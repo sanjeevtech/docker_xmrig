@@ -6,7 +6,7 @@
 * compiled with gcc 8 for better [performance](https://github.com/xmrig/xmrig/wiki/Ubuntu-Build#gcc-71)
 
 
-![MacDown Screenshot](screenshot.png)
+![MacDown Screenshot](https://github.com/donAFRO/docker_xmrig/raw/master/screenshot.png)
 
 # Usage
 
