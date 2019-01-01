@@ -1,17 +1,10 @@
 
+image: docker:dins
 
 services:
-  - name: docker:latest
-    # entrypoint: ["dockerd"]
-    # command: ["--insecure-registry=gitlab.afro.com:4567"]
-    
-# services:
-#   # must be here or docker commands not work
-#   - docker:dind
+  - docker:dind
 
 variables:
-  # When using dind, it's wise to use the overlayfs driver for
-  # improved performance.
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://docker:2375/
   CONTAINER_TEST_IMAGE: g.afro.sh/docker/xmrig:$CI_COMMIT_SHA
