@@ -3,8 +3,8 @@ image: docker:stable
 
 variables:
   DOCKER_DRIVER: overlay2
-  CONTAINER_TEST_IMAGE: g.afro.sh/docker/xmrig:$CI_COMMIT_SHA
-  CONTAINER_RELEASE_IMAGE: g.afro.sh/docker/xmrig:latest
+  CONTAINER_TEST_IMAGE: d.afro.sh/docker/xmrig:$CI_COMMIT_SHA
+  CONTAINER_RELEASE_IMAGE: d.afro.sh/docker/xmrig:latest
 
 
 stages:
