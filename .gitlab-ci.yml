@@ -1,5 +1,5 @@
 
-image: docker:dins
+image: docker:dind
 
 services:
   - docker:dind
