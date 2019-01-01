@@ -1,0 +1,43 @@
+
+
+services:
+  - name: docker:dind
+    # entrypoint: ["dockerd"]
+    # command: ["--insecure-registry=gitlab.afro.com:4567"]
+    
+# services:
+#   # must be here or docker commands not work
+#   - docker:dind
+
+variables:
+  # When using dind, it's wise to use the overlayfs driver for
+  # improved performance.
+  DOCKER_DRIVER: overlay2
+  # DOCKER_HOST: tcp://docker:2375/
+  CONTAINER_TEST_IMAGE: g.afro.sh/docker/xmrig:$CI_COMMIT_SHA
+  CONTAINER_RELEASE_IMAGE: g.afro.sh/docker/xmrig:latest
+  
+
+
+stages:
+  - build
+  # - test
+  # - release
+  # - staging
+
+
+
+before_script:
+  - docker info
+  - docker login -u gitlab-ci-token -p $$CI_BUILD_TOKEN g.afro.sh
+
+
+
+build-web:
+  stage: build
+  script:
+    - ls -la
+    - docker build --pull -t $CONTAINER_TEST_IMAGE .
+    - docker push $CONTAINER_TEST_IMAGE
+  
+
