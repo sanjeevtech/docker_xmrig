@@ -1,5 +1,6 @@
 # Alpine XMRig
 
+* Xmrig 2.14.1 
 * CPU monero miner [XMRig](https://github.com/xmrig/xmrig)
 * donation 0%
 * built on Alpine linux - only 55 MB container size with no decrease in performance
