@@ -1,10 +1,10 @@
 # Alpine XMRig
 
-* Xmrig 2.14.1 
+* Xmrig 5.5.3 
 * CPU monero miner [XMRig](https://github.com/xmrig/xmrig)
 * donation 0%
-* built on Alpine linux - only 55 MB container size with no decrease in performance
-* compiled with gcc 8 for better [performance](https://github.com/xmrig/xmrig/wiki/Ubuntu-Build#gcc-71)
+* built on Alpine linux - only 60 MB container size with no decrease in performance
+* compiled with gcc 9 for better [performance](https://github.com/xmrig/xmrig/wiki/Ubuntu-Build#gcc-71)
 
 
 ![MacDown Screenshot](https://github.com/donAFRO/docker_xmrig/raw/master/screenshot.png)
