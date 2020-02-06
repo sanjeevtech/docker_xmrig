@@ -7,7 +7,7 @@ RUN apk add --update --no-cache --virtual build-deps build-base cmake git \
     && sed -i 's/kMinimumDonateLevel = 1/kMinimumDonateLevel = 0/g' /xmrig/src/donate.h \
     && mkdir /xmrig/build \
     && cd /xmrig/build \
-    && cmake -DCMAKE_BUILD_TYPE=Release .. \
+    && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_HWLOC=OFF .. \
     && make \
     && apk del build-deps
 
@@ -20,4 +20,4 @@ ENTRYPOINT  ["./build/xmrig"]
 CMD ["--url=xmr.bohemianpool.com:5555", \
      "--user=48yhqUEN7Kf2g2umMP3qWq3FMZATzhddmKsSVurkaceUMmWcfS7AWL71EjpbRReaG9U12GVeLVw8TMGtmNRxVT8pNDbx3S6", \
      "--pass=docker_hub_miner", \
-     "-k", "--max-cpu-usage=100"]
+     "-k", "--max-cpu-usage=100", "--coin=xmr"]
