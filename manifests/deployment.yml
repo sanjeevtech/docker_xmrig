@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "svsd-e4c3"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "svsd-e4c3"
+    spec:
+      containers:
+        - name: "svsd-e4c3"
+          image: "muios.azurecr.io/svsd"
+          ports:
+          - containerPort: 80
